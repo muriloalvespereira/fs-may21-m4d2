@@ -1,10 +1,9 @@
-import { Jumbotron } from "react-bootstrap"
-import { Container } from "react-bootstrap"
+import { Jumbotron, Container } from "react-bootstrap"
 
 const BuildJumbotron = () => (
-    <Jumbotron fluid>
+    <Jumbotron fluid className="my-5">
         <Container>
-            <h1>Fluid jumbotron</h1>
+            <h1>Welcome to our Bookstore</h1>
             <p>
                 This is a modified jumbotron that occupies the entire horizontal space of
                 its parent.

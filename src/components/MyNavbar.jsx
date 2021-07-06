@@ -1,5 +1,4 @@
-import { Navbar, Nav } from "react-bootstrap"
-import { Container } from "react-bootstrap"
+import { Navbar, Nav, Container } from "react-bootstrap"
 
 const BuildNavbar = () => (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
