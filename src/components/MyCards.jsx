@@ -6,8 +6,8 @@ const BuildCards = (props) => (
             {
                 items.map(item => (
                     <Col key={item.asin} className="mb-3">
-                        <Card style={{ width: '18rem' }}>
-                            <Card.Img className="card-height" variant="top" src={item.img} />
+                        <Card className="w-100" style={{ width: '18rem' }}>
+                            <Card.Img className="card-height w-100" variant="top" src={item.img} />
                             <Card.Body>
                                 <Card.Title>Card Title</Card.Title>
                                 <Card.Text>
