@@ -10,7 +10,7 @@ class BuildCards extends Component {
         {items
           .map((item) => (
             <Col key={item.asin} className="mb-3">
-              <DisplayCard cardBuild={item}/>
+              <DisplayCard item={item}/>
             </Col>
           ))
           .slice(this.props.initial, this.props.end)}
