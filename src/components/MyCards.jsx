@@ -1,25 +1,22 @@
-import { Card, Col, Row } from "react-bootstrap"
-import items from '../data/horror.json'
+import { Component } from "react";
+import { Col, Row } from "react-bootstrap";
+import items from "../data/horror.json";
+import DisplayCard from "./Card";
 
-const BuildCards = (props) => (
-    <Row>
-            {
-                items.map(item => (
-                    <Col key={item.asin} className="mb-3">
-                        <Card className="w-100" style={{ width: '18rem' }}>
-                            <Card.Img className="card-height w-100" variant="top" src={item.img} />
-                            <Card.Body>
-                                <Card.Title>Card Title</Card.Title>
-                                <Card.Text>
-                                    Some quick example text to build on the card title and make up the bulk of
-                                    the card's content.
-                                </Card.Text>
-                            </Card.Body>
-                        </Card>
-                    </Col>
-                )).slice(props.initial, props.end)
-            }
-    </Row>
-)
+class BuildCards extends Component {
+  render() {
+    return (
+      <Row>
+        {items
+          .map((item) => (
+            <Col key={item.asin} className="mb-3">
+              <DisplayCard cardBuild={item}/>
+            </Col>
+          ))
+          .slice(this.props.initial, this.props.end)}
+      </Row>
+    );
+  }
+}
 
-export default BuildCards
+export default BuildCards;
