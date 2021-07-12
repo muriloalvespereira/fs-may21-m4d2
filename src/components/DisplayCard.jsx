@@ -1,13 +1,14 @@
 import { Component } from "react";
 import { Card } from "react-bootstrap";
-import Comments from "./CommentArea";
+import Comments from "./Comments";
 
 class DisplayCard extends Component {
   state = {
     showComments: false,
   };
 
-  displayComments = () => {
+  commentsSection = (e) => {
+    this.props.commentsSection(e);
     if (this.state.showComments === false) {
       this.setState({
         showComments: true,
@@ -31,7 +32,7 @@ class DisplayCard extends Component {
           <Card.Title className="card-title">
             {this.props.item.title}
           </Card.Title>
-          <Card.Text onClick={this.displayComments} className="show-comments">
+          <Card.Text onClick={(e) => this.commentsSection(this.props.item.asin)} className="show-comments">
             Show Comments
           </Card.Text>
           {this.state.showComments && <Comments item={this.props.item} />}
