@@ -31,7 +31,7 @@ class App extends Component{
             <BuildCards initial={0} end={4} commentsSection={this.commentsSection}/>
             <BuildCards initial={4} end={8} commentsSection={this.commentsSection}/>
           </Col>
-          <Col className="col-3 d-flex align-items-center">
+          <Col className="col-3">
           { this.state.asin !== null &&
             <DisplayComments initial={0} end={1} asin={this.state.asin}/>
           }

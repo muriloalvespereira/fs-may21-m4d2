@@ -1,6 +1,5 @@
 import { Component } from "react";
 import { ListGroup, Button } from "react-bootstrap";
-import Textarea from "./Textarea";
 import Loading from "./Loading";
 
 class CommentsArea extends Component {
@@ -93,9 +92,8 @@ class CommentsArea extends Component {
                 </Button>
               </div>
             ))
-            .slice(-3)}
+            .slice(-10)}
         </ListGroup>
-        <Textarea itemId={this.props.asin} />
       </>
     );
   }

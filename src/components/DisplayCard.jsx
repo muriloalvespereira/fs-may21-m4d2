@@ -32,7 +32,7 @@ class DisplayCard extends Component {
           <Card.Title className="card-title">
             {this.props.item.title}
           </Card.Title>
-          <Card.Text onClick={(e) => this.commentsSection(this.props.item.asin)} className="show-comments">
+          <Card.Text onClick={() => this.commentsSection(this.props.item.asin)} className="show-comments">
             Show Comments
           </Card.Text>
           {this.state.showComments && <Comments item={this.props.item} />}

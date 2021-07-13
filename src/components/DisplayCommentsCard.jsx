@@ -10,9 +10,7 @@ class DisplayCommentsCard extends Component {
   render() {
     return (
       <Card className="w-100" style={{ width: "18rem" }}>
-        
         <Card.Body>
-          
           <CommentsArea asin={this.props.asin} />
         </Card.Body>
       </Card>
